@@ -46,6 +46,8 @@ custom_followup_at                    date                       Internal date f
 checkin_attention                     boolean                    If ``true``, the check-in app should show a warning
                                                                  that this ticket requires special attention if a ticket
                                                                  of this order is scanned.
+checkin_text                          string                     Text that will be shown if a ticket of this order is
+                                                                 scanned (or ``null``).
 invoice_address                       object                     Invoice address information (can be ``null``)
 ├ last_modified                       datetime                   Last modification date of the address
 ├ company                             string                     Customer company name
@@ -314,6 +316,7 @@ List of all orders
             "comment": "",
             "custom_followup_at": null,
             "checkin_attention": false,
+            "checkin_text": null,
             "require_approval": false,
             "valid_if_pending": false,
             "invoice_address": {
@@ -534,6 +537,7 @@ Fetching individual orders
         "comment": "",
         "custom_followup_at": null,
         "checkin_attention": false,
+        "checkin_text": null,
         "require_approval": false,
         "valid_if_pending": false,
         "invoice_address": {
@@ -703,6 +707,8 @@ Updating order fields
    * ``phone``
 
    * ``checkin_attention``
+
+   * ``checkin_text``
 
    * ``locale``
 
@@ -919,6 +925,7 @@ Creating orders
    * ``comment`` (optional)
    * ``custom_followup_at`` (optional)
    * ``checkin_attention`` (optional)
+   * ``checkin_text`` (optional)
    * ``require_approval`` (optional)
    * ``valid_if_pending`` (optional)
    * ``invoice_address`` (optional)
