@@ -200,6 +200,10 @@ meta_data                               object                     Values set fo
 
    The ``media_policy`` and ``media_type`` attributes have been added.
 
+.. versionchanged:: 2023.8
+
+   The ``checkin_text`` and ``variations[x].checkin_text`` attributes have been added.
+
 Notes
 -----
 

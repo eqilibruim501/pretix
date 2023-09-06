@@ -55,6 +55,10 @@ meta_data                             object                     Values set for 
 
    The ``meta_data`` and ``checkin_attention`` attributes have been added.
 
+.. versionchanged:: 2023.8
+
+   The ``checkin_text`` attribute has been added.
+
 Endpoints
 ---------
 
