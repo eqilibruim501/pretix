@@ -7,10 +7,10 @@ requires-python = ">=3.9"
 license = {file = "LICENSE"}
 keywords = ["tickets", "web", "shop", "ecommerce"]
 authors = [
-  {name = "pretix team", email = "support@pretix.eu"},
+  {name = "AllStarTix team", email = "support@allstartix.co.za"},
 ]
 maintainers = [
-  {name = "pretix team", email = "support@pretix.eu"},
+  {name = "AllStarTix team", email = "support@allstartix.co.za"},
 ]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
@@ -147,10 +147,10 @@ requires = [
 ]
 
 [project.urls]
-homepage = "https://pretix.eu"
-documentation = "https://docs.pretix.eu"
+homepage = "https://allstartix.tech"
+documentation = "https://docs.allstartix.tech"
 repository = "https://github.com/pretix/pretix.git"
-changelog = "https://pretix.eu/about/en/blog/"
+changelog = "https://allstartix.tech/about/en/blog/"
 
 [tool.setuptools]
 include-package-data = true

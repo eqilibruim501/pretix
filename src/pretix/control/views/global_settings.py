@@ -129,7 +129,7 @@ class LicenseCheckView(StaffMemberRequiredMixin, FormView):
         gs = GlobalSettingsObject()
         d.update(gs.settings.license_check_input)
         if not d:
-            d['source_notice'] = 'pretix (AGPLv3 with additional terms): https://github.com/pretix/pretix'
+            d['source_notice'] = 'AllStarTix (AGPLv3 with additional terms): https://allstartix.tech'
             seen = set()
             for entry_point in metadata.entry_points(group='pretix.plugin'):
                 if entry_point.dist.name not in seen:
@@ -188,14 +188,14 @@ class LicenseCheckView(StaffMemberRequiredMixin, FormView):
             res.append((
                 'danger', 'exclamation-circle',
                 _('You are in violation of the license. If you\'re not sure whether you qualify for the additional '
-                  'permission or if you offer the functionality of pretix to others, you must either use pretix under '
-                  'AGPLv3 terms or obtain a pretix Enterprise license.')
+                  'permission or if you offer the functionality of AllStarTix to others, you must either use AllStarTix under '
+                  'AGPLv3 terms or obtain a AllStarTix Enterprise license.')
             ))
 
         if (input.get('base_license') != 'agpl' or input.get('plugins_enterprise')) and input.get('plugins_copyleft'):
             res.append((
                 'danger', 'exclamation-circle',
-                _('You may not make use of the additional permission or of a pretix Enterprise license if you install '
+                _('You may not make use of the additional permission or of a AllStarTix Enterprise license if you install '
                   'any plugins licensed with strong copyleft, otherwise you are likely in violation of the license '
                   'of these plugins.')
             ))
@@ -203,29 +203,29 @@ class LicenseCheckView(StaffMemberRequiredMixin, FormView):
         if input.get('base_license') == 'agpl' and not input.get('source_notice'):
             res.append((
                 'danger', 'exclamation-circle',
-                _('If you\'re using pretix under AGPL license, you need to provide instructions on how to access the '
+                _('If you\'re using AllStarTix under AGPL license, you need to provide us instructions on how to access the '
                   'source code.')
             ))
 
         if input.get('base_license') == 'agpl' and input.get('plugins_enterprise'):
             res.append((
                 'danger', 'exclamation-circle',
-                _('You must not use pretix under AGPL terms if you use pretix Enterprise plugins.')
+                _('You must not use AllStarTix under AGPL terms if you use AllStarTix Enterprise plugins.')
             ))
 
         if input.get('base_license') not in ('enterprise', 'agpl_addperm'):
             if input.get('base_changes') == 'yes':
                 res.append((
                     'warning', 'warning',
-                    _('You need to make all changes you made to pretix\' source code freely available to every visitor '
-                      'of your site in source code form under the same license terms as pretix (AGPLv3 + additional '
+                    _('You need to make all changes you made to AllStarTix\' source code freely available to every visitor '
+                      'of your site in source code form under the same license terms as AllStarTix (AGPLv3 + additional '
                       'restrictions). Make sure to keep it up to date!')
                 ))
             if input.get('plugins_own'):
                 res.append((
                     'warning', 'warning',
                     _('You need to make all your installed plugins freely available to every visitor '
-                      'of your site in source code form under the same license terms as pretix (AGPLv3 + additional '
+                      'of your site in source code form under the same license terms as AllStarTix (AGPLv3 + additional '
                       'restrictions). Make sure to keep it up to date!')
                 ))
 

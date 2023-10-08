@@ -242,8 +242,8 @@ CURRENCY_PLACES = {
     'XPF': 0,
 }
 
-PRETIX_EMAIL_NONE_VALUE = 'none@well-known.pretix.eu'
-PRETIX_PRIMARY_COLOR = '#8E44B3'
+PRETIX_EMAIL_NONE_VALUE = 'none@allstartix.co.za'
+PRETIX_PRIMARY_COLOR = '#5A6890'
 
 # pretix includes caching options for some special situations where full HTML responses are cached. This might be
 # stressful for some cache setups so it is enabled by default and currently can't be enabled through pretix.cfg

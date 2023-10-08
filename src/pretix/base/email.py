@@ -61,7 +61,7 @@ def test_custom_smtp_backend(backend: T, from_addr: str) -> None:
         if code != 250:
             logger.warning('Error testing mail settings, code %d, resp: %s' % (code, resp))
             raise SMTPResponseException(code, resp)
-        (code, resp) = backend.connection.rcpt('testdummy@pretix.eu')
+        (code, resp) = backend.connection.rcpt('testdummy@allstartix.co.za')
         if (code != 250) and (code != 251):
             logger.warning('Error testing mail settings, code %d, resp: %s' % (code, resp))
             raise SMTPResponseException(code, resp)

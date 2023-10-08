@@ -108,9 +108,9 @@ class UpdateSettingsForm(SettingsForm):
     update_check_perform = forms.BooleanField(
         required=False,
         label=_("Perform update checks"),
-        help_text=_("During the update check, pretix will report an anonymous, unique installation ID, "
-                    "the current version of pretix and your installed plugins and the number of active and "
-                    "inactive events in your installation to servers operated by the pretix developers. We "
+        help_text=_("During the update check, AllStarTix will report an anonymous, unique installation ID, "
+                    "the current version of AllStarTix and your installed plugins and the number of active and "
+                    "inactive events in your installation to servers operated by the AllStarTix developers. We "
                     "will only store anonymous data, never any IP addresses and we will not know who you are "
                     "or where to find your instance. You can disable this behavior here at any time.")
     )
@@ -133,9 +133,9 @@ class LicenseCheckForm(forms.Form):
         label=_("Changes to pretix"),
         widget=forms.RadioSelect,
         choices=(
-            ("no", _('This installation of pretix is running without any custom modifications or extensions '
+            ("no", _('This installation of AllStarTix is running without any custom modifications or extensions '
                      '(except for installed plugins).')),
-            ("yes", _('This installation of pretix includes changes or extensions made to the source code.')),
+            ("yes", _('This installation of AllStarTix includes changes or extensions made to the source code.')),
         )
     )
     usage = forms.ChoiceField(
@@ -143,10 +143,10 @@ class LicenseCheckForm(forms.Form):
         label=_("Usage of pretix"),
         widget=forms.RadioSelect,
         choices=(
-            ("internally", _('I only use pretix to organize events which are executed by my own company or its '
+            ("internally", _('I only use AllStarTix to organize events which are executed by my own company or its '
                              'affiliated companies, or to sell products sold by my own company.')),
-            ("saas", _('I use pretix to sell tickets of other event organizers (e.g. a ticketing company) or I offer '
-                       'the functionality of pretix to others (e.g. a Software-as-a-Service company).')),
+            ("saas", _('I use AllStarTix to sell tickets of other event organizers (e.g. a ticketing company) or I offer '
+                       'the functionality of AllStarTix to others (e.g. a Software-as-a-Service company).')),
             ("unsure", _('I\'m not sure which option applies.')),
         )
     )
@@ -155,38 +155,38 @@ class LicenseCheckForm(forms.Form):
         label=_("License choice"),
         widget=forms.RadioSelect,
         choices=(
-            ("agpl_addperm", _('I want to use pretix under the additional permission granted to everyone by the '
-                               'copyright holders which allows me to not share modifications if I only use pretix '
+            ("agpl_addperm", _('I want to use AllStarTix under the additional permission granted to everyone by the '
+                               'copyright holders which allows me to not share modifications if I only use AllStarTix '
                                'internally.')),
-            ("agpl", _('I want to use pretix under the terms of the AGPLv3 license without restriction on the scope '
+            ("agpl", _('I want to use AllStarTix under the terms of the AGPLv3 license without restriction on the scope '
                        'of usage and therefore without making use of any additional permission.')),
-            ("enterprise", _('I have obtained a paid pretix Enterprise license which is currently valid.'))
+            ("enterprise", _('I have obtained a paid AllStarTix Enterprise license which is currently valid.'))
         )
     )
     plugins_free = forms.BooleanField(
         required=False,
-        label=_("This installation of pretix has installed plugins which are available freely under a non-copyleft "
+        label=_("This installation of AllStarTix has installed plugins which are available freely under a non-copyleft "
                 "license (Apache License, MIT License, BSD license, …)."),
     )
     plugins_copyleft = forms.BooleanField(
         required=False,
-        label=_("This installation of pretix has installed plugins which are available freely under a license with "
+        label=_("This installation of AllStarTix has installed plugins which are available freely under a license with "
                 "strong copyleft (GPL, AGPL, …)."),
     )
     plugins_own = forms.BooleanField(
         required=False,
-        label=_("This installation of pretix has installed plugins which have been created internally or obtained under "
+        label=_("This installation of AllStarTix has installed plugins which have been created internally or obtained under "
                 "a proprietary license by a third party."),
     )
     plugins_enterprise = forms.BooleanField(
         required=False,
-        label=_("This installation of pretix has installed pretix Enterprise plugins with a valid license."),
+        label=_("This installation of AllStarTix has installed AllStarTix Enterprise plugins with a valid license."),
     )
     poweredby_name = forms.CharField(
         required=False,
         label=_('Footer: "powered by" name (optional)'),
         help_text=_('If you want the "powered by" message in the page footer to include the name of your company or '
-                    'organization (if you made any changes to pretix), set the name here.')
+                    'organization (if you made any changes to AllStarTix), set the name here.')
     )
     poweredby_url = forms.URLField(
         required=False,
@@ -197,7 +197,7 @@ class LicenseCheckForm(forms.Form):
         required=False,
         label=_('Source code instructions'),
         widget=forms.Textarea(attrs={'rows': '6'}),
-        help_text=_('If you use pretix under AGPLv3 terms, describe exactly how to download the current source code '
+        help_text=_('If you use AllStarTix under AGPLv3 terms, describe exactly how to download the current source code '
                     'of the site including all modifications and installed plugins. This will be publicly available. '
-                    'Make sure to keep it up to date!'),
+                    'We ensure to keep it up to date!'),
     )

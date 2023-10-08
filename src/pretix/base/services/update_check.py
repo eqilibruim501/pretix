@@ -110,14 +110,14 @@ def send_update_notification_email():
 
     mail(
         gs.settings.update_check_email,
-        _('pretix update available'),
+        _('AllStarTix update available'),
         LazyI18nString.from_gettext(
             gettext_noop(
-                'Hi!\n\nAn update is available for pretix or for one of the plugins you installed in your '
-                'pretix installation. Please click on the following link for more information:\n\n {url} \n\n'
-                'You can always find information on the latest updates on the pretix.eu blog:\n\n'
-                'https://pretix.eu/about/en/blog/'
-                '\n\nBest,\n\nyour pretix developers'
+                'Hi!\n\nAn update is available for AllStarTix or for one of the plugins you installed in your '
+                'AllStarTix installation. Please click on the following link for more information:\n\n {url} \n\n'
+                'You can always find information on the latest updates on the AllStarTix blog:\n\n'
+                'https://allstartix.tech/about/en/blog/'
+                '\n\nBest,\n\nyour AllStarTix developers'
             )
         ),
         {
