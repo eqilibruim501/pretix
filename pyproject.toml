@@ -7,10 +7,10 @@ requires-python = ">=3.9"
 license = {file = "LICENSE"}
 keywords = ["tickets", "web", "shop", "ecommerce"]
 authors = [
-  {name = "AllStarTix team", email = "support@allstartix.co.za"},
+  {name = "Eqilibrium Solutions team", email = "support@eqilibriumsolutions.com"},
 ]
 maintainers = [
-  {name = "AllStarTix team", email = "support@allstartix.co.za"},
+  {name = "Eqilibrium Solutions team", email = "support@eqilibriumsolutions.com"},
 ]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
@@ -60,7 +60,7 @@ dependencies = [
   "dnspython==2.3.*",
   "drf_ujson2==1.7.*",
   "geoip2==4.*",
-  "importlib_metadata==6.*",  # Polyfill, we can probably drop this once we require Python 3.10+
+  "importlib_metadata==7.1.0",  # Polyfill, we can probably drop this once we require Python 3.10+
   "isoweek",
   "jsonschema",
   "kombu==5.2.*",
@@ -147,7 +147,7 @@ requires = [
 ]
 
 [project.urls]
-homepage = "https://allstartix.tech"
+homepage = "https://tixsa.co.za"
 documentation = "https://docs.allstartix.tech"
 repository = "https://github.com/pretix/pretix.git"
 changelog = "https://allstartix.tech/about/en/blog/"
